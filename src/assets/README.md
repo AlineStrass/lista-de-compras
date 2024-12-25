@@ -1,0 +1,2 @@
+// REFERENCIA DO STICKER DE CARRINHO DE COMPRAS
+<a href="https://www.flaticon.com/br/stickers-gratis/carrinho-de-compras" title="carrinho de compras figurinhas">Carrinho de compras figurinhas criadas por Stickers - Flaticon</a>
