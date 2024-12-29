@@ -5,9 +5,8 @@
             max-width="400" 
             persistent
             >
-            <v-card prepend-icon="mdi-map-marker" 
-                text="Tem Certeza que deseja excluir?"
-                title="Tem Certeza que deseja excluir?"
+            <v-card prepend-icon="mdi mdi-information-slab-circle-outline" 
+                title="Confirmar a exclusão?"
                 >
                 <template v-slot:actions>
                     <v-spacer></v-spacer>
