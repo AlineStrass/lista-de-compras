@@ -15,12 +15,7 @@
 
 <script setup>
   import { ref } from 'vue'
-
-  const drawer = ref(null)
+  const drawer = ref(0)
 </script>
 
-<script>
-  export default {
-    data: () => ({ drawer: null }),
-  }
-</script>
+
