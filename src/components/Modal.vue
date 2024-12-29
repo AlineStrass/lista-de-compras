@@ -54,10 +54,4 @@ watch(
     }
 );
 
-// Ação de confirmação
-const confirmAction = () => {
-  console.log("Item excluído!");
-  localDialog.value = false; // Fechar o modal
-};
-
 </script>
