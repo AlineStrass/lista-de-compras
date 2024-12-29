@@ -4,21 +4,31 @@
     <v-text-field clearable label="Adicionar Item" v-model="newItem" @keyup.enter="addItem"></v-text-field>
 
     <!-- CAMPO DA LISTA COM OS ITENS ADICIONADOS -->
-    <v-list lines="three">
+    <v-list lines="two">
       <v-list-item v-for="(item, index) in items" :key="index" :title="item.title" :value="index">
 
         <!-- Botão de deletar item -->
         <template v-slot:append>
-          <v-btn color="grey-lighten" icon="mdi-delete-forever" variant="text"></v-btn>
+          <v-btn 
+            color="grey-lighten" 
+            icon="mdi-delete-forever" 
+            variant="text"
+             @click="openDeleteModal(index)"
+            ></v-btn>
         </template>
 
       </v-list-item>
     </v-list>
+
+    <!-- Modal -->
+    <Modal :dialog="showModal"></Modal>
+
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import Modal from '@/components/Modal.vue';
 
 // Lista de itens com estado inicial
 const items = ref([
@@ -38,6 +48,13 @@ const addItem = () => {
     });
     newItem.value = ""; // Limpa o campo de entrada
   }
+};
+// Estado do modal
+const showModal =  ref(false);
+// Função para abrir o modal (pode passar informações como o índice do item se necessário)
+const openDeleteModal = (index) => {
+  console.log(`Abrindo modal para o item: ${index}`);
+  showModal.value = true;
 };
 
 </script>
